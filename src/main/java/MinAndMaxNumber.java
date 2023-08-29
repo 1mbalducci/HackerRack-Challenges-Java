@@ -1,3 +1,4 @@
+import java.math.BigInteger;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
@@ -9,21 +10,28 @@ public class MinAndMaxNumber {
         int[] arr = {1, 1, 3, 4, 5};
 
        List<Integer> arr2= new ArrayList(){{ add(1);add(3);add(2);add(4);add(5);}};
+       List<Integer> arr3= new ArrayList(){{ add(256741038);add(623958417);add(467905213);add(714532089);add(938071625);}};
+
+        Long sumSmallestNums=0L;
+        Long sumlargestNums= 0L;
 
 
-        int sumSmallestNums=0;
-        int sumlargestNums=0;
+        Collections.sort(arr3);
+        System.out.println(arr3.size());
 
-
-        Collections.sort(arr2);
-        System.out.println(arr2.size());
-
-        for (int i=0; i<arr2.size()-1; i++){
-            sumSmallestNums+=arr2.get(i);
+        for (int i=0; i<arr3.size()-1; i++){
+            sumSmallestNums+= arr3.get(i).longValue();
         };
+        System.out.println(arr3.toString());
 
-        System.out.println(arr2.toString());
+        Collections.reverse(arr3);
+        for (int i=0; i<arr3.size()-1; i++){
+            sumlargestNums+=arr3.get(i).longValue();
+        };
+        System.out.println(arr3.toString());
 
+        System.out.println(sumSmallestNums);
+        System.out.println(sumlargestNums);
         }
 
 

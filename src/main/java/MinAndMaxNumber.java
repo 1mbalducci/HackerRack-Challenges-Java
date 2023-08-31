@@ -16,7 +16,20 @@ public class MinAndMaxNumber {
         Long sumlargestNums= 0L;
 
 
+
+
         Collections.sort(arr3);
+        System.out.println(arr3.size());
+
+        for (int i=0; i<arr3.size()-1; i++){
+            sumSmallestNums+= arr3.get(i).longValue();
+        };
+        System.out.println(arr3.toString());
+
+        Collections.reverse(arr3);
+        for (int i=0; i<arr3.size()-1; i++){
+            sumlargestNums+=arr3.get(i).longValue();
+        };Collections.sort(arr3);
         System.out.println(arr3.size());
 
         for (int i=0; i<arr3.size()-1; i++){

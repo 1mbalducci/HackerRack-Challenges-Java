@@ -1,2 +1,2 @@
 # HackerRack-Challenges-Java
-Coding challenges completed in Java and beyond!😊😊
+Coding challenges completed in Java and beyond!😊
